@@ -3,7 +3,7 @@
 <%= link_to "New Picture", "/pictures/new" %>
 
 <% @pictures.each do |picture| %>  
-<p><%= picture[:title] %>, <%= picture[:artist] %></p>  
+<p><a href="/pictures/<%= picture[:id]%>"><%= picture[:title] %></a>, <%= picture[:artist] %></p>  
 <%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
 
 <% end %>
