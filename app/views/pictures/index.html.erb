@@ -11,7 +11,29 @@
 
 <p>&nbsp;</p>
 
-Most Recent Additions: <%= @pictures.created_before(1.day.ago).count %>
+<h1>Older Pictures</h1>
+<ul>
+<% @pictures.created_before(1.day.ago).each do |picture| %>  
+<li><p><a href="/pictures/<%= picture[:id]%>"><%= picture[:title] %></a>, <%= picture[:artist] %></p> </li>
+
+<% end %>
+</ul>
+<p>&nbsp;</p>
+
+
+<h1>All Pictures</h1>
+<ol>
+<% @pictures.each do |picture| %>  
+<li><p><a href="/pictures/<%= picture[:id]%>"><%= picture[:title] %></a>, <%= picture[:artist] %></p> </li> 
+
+
+<% end %>
+</ol>
+
+<p>&nbsp;</p>
+
+
+<p>Most Recent Additions: <%= @pictures.created_before(1.day.ago).count %></p>
 
 <p><%= @pictures.all.length %> Pictures in Database </p>
 
