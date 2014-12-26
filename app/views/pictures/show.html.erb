@@ -1,4 +1,4 @@
-<%= link_to "Back to Pictures", pictures_url %> | <%= link_to "Edit", edit_picture_path(@picture[:id]) %> | <%= link_to "Delete", @picture,  method: :delete, data: { confirm: "Are you sure you want to delete this picture?" } %>
+<%= link_to "Back to Pictures", pictures_url, class: "button" %> | <%= link_to "Edit", edit_picture_path(@picture[:id]), class: "button round" %> | <%= link_to "Delete", @picture,  method: :delete, data: { confirm: "Are you sure you want to delete this picture?" }, class: "button" %>
 
 <p><%= @picture[:title]%>, <%= @picture[:artist]%></p><img src="<%= @picture[:url]%>">
 
