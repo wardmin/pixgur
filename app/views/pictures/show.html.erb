@@ -1,9 +1,9 @@
 <div class="row">
 	<div class="small-8 small-centered columns">
-		<ul class="button-group">	
-			<li> <%= link_to "Back to Pictures", pictures_url, class: "button" %></li> 
-			<li> <%= link_to "Edit", edit_picture_path(@picture[:id]), class: "button" %> </li>
-			<li> <%= link_to "Delete", @picture,  method: :delete, data: { confirm: "Are you sure you want to delete this picture?" }, class: "button" %></li>
+		<ul class="button-group radius round">	
+			<li> <%= link_to "Back to Pictures", pictures_url, class: "button small" %></li> 
+			<li> <%= link_to "Edit", edit_picture_path(@picture[:id]), class: "button small" %> </li>
+			<li> <%= link_to "Delete", @picture,  method: :delete, data: { confirm: "Are you sure you want to delete this picture?" }, class: "button small alert" %></li>
 		</ul>	
 	</div>
 </div> 
