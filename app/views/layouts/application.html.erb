@@ -13,7 +13,8 @@
   </head>
 
   <body>
-  	 <nav class="top-bar" data-topbar>
+  	<!-- Top Bar Nav -->
+  	 <nav class="top-bar show-for-medium-up" data-topbar>
       <ul class="title-area">
         <li class="name"></li>
         <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
@@ -27,8 +28,26 @@
        </section>
       </nav>
 
+    <!-- Off canvas nav -->
+    <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+        <nav class="tab-bar show-for-small-only">
+          <section class="left-small">
+            <a class="left-off-canvas-toggle menu-icon"><span></span></a>
+          </section>
+        </nav>
+        <aside class="left-off-canvas-menu">
+        	<ul class="off-canvas-list">
+	        	<li><%= link_to "PIXGUR", root_path %></li>
+	        	<li class="active"><a href="#">Home</a></li>
+	        	<li><%= link_to "Add new Pix", "/pictures/new" %></li>
+        	</ul>
+        </aside>
+        <a class="exit-off-canvas"></a>
+
 
     <%= yield %>
-
+	</div>
+	</div>
   </body>
 </html>
