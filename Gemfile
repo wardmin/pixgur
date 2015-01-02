@@ -25,6 +25,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # frontend framework
 gem 'foundation-rails', "5.4.5"
 
+# amazon s3 gems
+gem 'aws-sdk'
+gem 'paperclip'
+gem 's3_direct_upload'
+
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 group :development, :test do
 	gem 'spring' 
