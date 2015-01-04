@@ -2,7 +2,7 @@
 	<div class="small-10 small-centered columns">
 		<h1>The <%= @most_recent_pictures.length %> Most Recent Pix  </h1>
 
-		<ul>
+		<ul class="no-bullet">
 		<% @most_recent_pictures.each do |picture| %>  
 			<li><p><a href="/pictures/<%= picture[:id]%>"><%= picture[:title] %></a>, <%= picture[:artist] %></p> </li> 
 
@@ -13,7 +13,7 @@
 		<p>&nbsp;</p>
 
 		<h1>Older Pictures</h1>
-		<ul>
+		<ul class="no-bullet">
 		<% @pictures.created_before(1.day.ago).each do |picture| %>  
 			<li><p><a href="/pictures/<%= picture[:id]%>"><%= picture[:title] %></a>, <%= picture[:artist] %></p> </li>
 
