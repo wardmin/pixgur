@@ -2,9 +2,13 @@
 	<div class="small-10 small-centered columns">
 		<h1>The <%= @most_recent_pictures.length %> Most Recent Pix  </h1>
 
-		<ul class="no-bullet">
+		<ul data-orbit>
 		<% @most_recent_pictures.each do |picture| %>  
-			<li><p><a href="/pictures/<%= picture[:id]%>"><%= picture[:title] %></a>, <%= picture[:artist] %></p> </li> 
+			<li><img src="<%= picture[:url]%>">
+				<div class="orbit-caption">
+					<%= picture[:title] %></a>, <%= picture[:artist] %>
+				</div> 
+			</li> 
 
 
 		<% end %>
