@@ -16,10 +16,4 @@
 //= require turbolinks
 //= require_tree .
 
-$(function(){ $(document).foundation({
-	orbit: {
-    pause_on_hover: true,
-    variable_height: true,
-    bullets: false
-  }
-}); });
+$(function(){ $(document).foundation(); });

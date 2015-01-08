@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140827135339) do
+ActiveRecord::Schema.define(version: 20150108230454) do
 
   create_table "pictures", force: true do |t|
     t.string   "artist"
@@ -19,6 +19,10 @@ ActiveRecord::Schema.define(version: 20140827135339) do
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "pixfile_file_name"
+    t.string   "pixfile_content_type"
+    t.integer  "pixfile_file_size"
+    t.datetime "pixfile_updated_at"
   end
 
 end
