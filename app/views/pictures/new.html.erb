@@ -5,7 +5,7 @@
 				<h1>Add a picture</h1>
 			</div>
 		</div>
-		<%= form_for @picture do |f| %> 
+		<%= form_for @picture, :html => { :multipart => true } do |f| %> 
 			<div class="row">
 				<div class="small-2 columns">
 					<%= f.label "artist", class: "right inline radius" %>
@@ -27,8 +27,11 @@
 					<%= f.label "url", class: "right inline radius" %>
 				</div>
 				<div class="small-10 columns">
-					<%= f.text_field "url", class: "right-label radius" %>
+					<%= f.text_field "url", class: "right-label radius" %> <br>
+					<%= f.file_field :pixfile %>
 				</div>
+
+
 			</div>
 			<div class="row">
 				<div class="small-offset-2 small-10 columns">

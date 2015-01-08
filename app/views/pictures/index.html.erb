@@ -2,7 +2,7 @@
 	<div class="small-10 small-centered columns">
 		<ul data-orbit>
 		<% @most_recent_pictures.each do |picture| %>  
-			<li><img src="<%= picture[:url]%>">
+			<li><%= image_tag picture.pixfile.url %>
 				<div class="orbit-caption">
 					<%= picture[:title] %></a>, <%= picture[:artist] %>
 				</div> 
