@@ -36,9 +36,11 @@
 		</div>
 
 		<div class="row">
-			<div class="small-10 small-centered columns">
-				<p>Most Recent Additions: <%= @pictures.created_before(1.day.ago).count %></p>
-				<p><%= @pictures.all.length %> Pictures in Database </p>
+			<div class="small-12 small-centered columns">
+				<div class="panel callout radius">
+					<p>Most Recent Additions: <%= @pictures.created_before(1.day.ago).count %></p>
+					<p><%= @pictures.all.length %> Pictures in Database </p>
+				</div>
 			</div>
 		</div>
 	</div>
