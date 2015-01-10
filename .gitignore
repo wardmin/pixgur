@@ -15,5 +15,8 @@
 /log/*.log
 /tmp
 
-#Ignore uploads folder
+# Ignore uploads folder
 /public/system
+
+# Ignore aws keys
+/config/aws.yml
